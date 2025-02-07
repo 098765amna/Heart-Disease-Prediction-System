@@ -1,0 +1,29 @@
+Name,Age,Sex,ChestPain,RestBP,Chol,Fbs,RestECG,MaxHR,ExAng,Oldpeak,Slope,Ca,Thal,Prediction
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+yumna,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+attia,24,0,0,50,148,1,0.0,0,1,0.0,1,0,0,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+maha,1,1,Typical Angina,50,0,1,0.0,0,1,0.0,1,0,normal,0
+maha,1,1,Typical Angina,50,0,1,0.0,0,1,0.0,1,0,normal,0
+rooma,1,1,Typical Angina,50,0,1,0.0,0,1,0.0,1,0,normal,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+areeba,24,0,0,50,150,1,0.0,110,1,2.5,1,1,0,0
+areeba,24,0,0,50,150,1,0.0,110,1,2.5,1,1,0,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+aliiii,9,Male,no,50,0,True,,0,Yes,0.0,1,0,no,Not Available
+aliiii,9,Male,no,50,0,True,,0,Yes,0.0,1,0,no,Not Available
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+,1,1,0,50,0,1,0.0,0,1,0.0,1,0,0,0
+,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+jasim,10,Male,no,50,150,True,normal,110,Yes,1.9,1,1,yes,Not Available
+mahnoor,13,Female,no,109,150,True,normal,110,Yes,1.9,1,1,no,Not Available
+Amina,0,Male,,50,0,True,,0,Yes,0.0,1,0,,Not Available
+areebah,10,0,0,50,148,1,0,109,1,2.0,1,1,0,0
