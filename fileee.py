@@ -101,6 +101,11 @@ if "role" not in st.session_state:
         st.image(image, caption="Stay Heart Healthy!", use_container_width=True)
     except:
         st.write("")
+
+        # Resize the image (adjust width and height as needed)
+        new_width = 200  # Set your desired width
+        new_height = 200  # Set your desired height
+        resized_image = image.resize((new_width, new_height))
     
     # Role selection buttons with icons and buttons
     col1, col2 = st.columns(2)
@@ -136,26 +141,31 @@ if "role" not in st.session_state:
 if "role" in st.session_state:
     if st.session_state["role"] == "patient":
         # Patient page
+     if "authenticated" not in st.session_state:
         st.title("Heart Disease Prediction: Patient Section")
      
         st.markdown("<h3 style='text-align: center;'>Patient Login</h3>", unsafe_allow_html=True)
+        
         patient_username = st.text_input("Patient ID")
         patient_password = st.text_input("Patient Password", type="password")
-        if st.button("Enter as Patient", key="patient_btn"):
-            if patient_username and patient_password:  # Replace with actual authentication logic
-                st.session_state["role"] = "patient"
-                st.success("Patient Login Successful!")
-            else:
-                st.error("Invalid Patient Credentials")
         
-       
-
+        if st.button("Login"):
+          if patient_username and patient_password:  # Replace with actual authentication logic
+            st.session_state["authenticated"] = True
+            st.experimental_rerun()  # Refresh to hide the login form
+          else:
+            st.error("Invalid Patient Credentials")
+            st.stop()
+     else:
+        # Patient functionalities section starts here
+        st.title("Heart Disease Prediction: Patient Section")
 
         # Add a back button
         if st.button("Back to Main Page"):
             reset_session_state()
 
-        # Create sections
+
+        # Sidebar Navigation
         st.sidebar.title("Navigation")
         page = st.sidebar.radio("Go to", ["Enter Parameters", "View Results", "Suggested Doctor", "Give Feedback"])
 
@@ -306,6 +316,7 @@ if "role" in st.session_state:
                     st.success("Thank you for your feedback!")
                 else:
                     st.error("Feedback cannot be empty.")
+                    
 
     elif st.session_state["role"] == "admin":
         # Admin page
