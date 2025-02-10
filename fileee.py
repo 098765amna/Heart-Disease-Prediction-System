@@ -122,6 +122,7 @@ if "role" not in st.session_state:
         )
         if st.button("Login as Admin"):
             st.session_state["role"] = "admin"    
+            st.rerun()  # 🔥 Forces immediate rerun to show login page correctly
 
     with col2:
         st.markdown(
@@ -135,6 +136,7 @@ if "role" not in st.session_state:
         )
         if st.button("Enter as Patient"):
             st.session_state["role"] = "patient"
+            st.rerun()  # 🔥 Forces an immediate page reload
 
 
 # Logic for the Patient and Admin sections
@@ -152,7 +154,7 @@ if "role" in st.session_state:
         if st.button("Login"):
           if patient_username and patient_password:  # Replace with actual authentication logic
             st.session_state["authenticated"] = True
-            
+
             #st.experimental_rerun()  # Refresh to hide the login form
             st.session_state["user_id"] = patient_username  # Store user ID
           else:
@@ -331,6 +333,7 @@ if "role" in st.session_state:
             if admin_username == "admin" and admin_password == "admin123":
                 st.session_state["role"] = "admin_authenticated"
                 st.success("Welcome, Admin!")
+                st.rerun()  # 🔥 Ensures immediate transition to the admin section
             else:
                 st.error("Invalid credentials. Please try again.")
 
