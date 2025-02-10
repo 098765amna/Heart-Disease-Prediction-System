@@ -66,12 +66,12 @@ if "role" not in st.session_state:
         .button-container > div {
             text-align: center;
         }
-         .icon {
+        .icon {
             font-size: 50px;
             color:rgb(243, 246, 248);
             margin-bottom: 10px;
         }
-       .button-label {
+        .button-label {
             font-size: 1.2em;
             font-weight: bold;
             color:rgb(243, 244, 245);
@@ -152,8 +152,9 @@ if "role" in st.session_state:
         if st.button("Login"):
           if patient_username and patient_password:  # Replace with actual authentication logic
             st.session_state["authenticated"] = True
-            st.session_state["user_id"] = patient_username  # Store user ID  
             
+            #st.experimental_rerun()  # Refresh to hide the login form
+            st.session_state["user_id"] = patient_username  # Store user ID
           else:
             st.error("Invalid Patient Credentials")
             st.stop()
