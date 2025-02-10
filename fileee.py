@@ -54,7 +54,7 @@ if "role" not in st.session_state:
         .description {
             text-align: center;
             font-size: 1.2em;
-            color: #1d3557;
+            color:rgb(232, 234, 237);
             margin-bottom: 20px;
         }
         .button-container {
@@ -66,15 +66,15 @@ if "role" not in st.session_state:
         .button-container > div {
             text-align: center;
         }
-        .icon {
+         .icon {
             font-size: 50px;
-            color: #457b9d;
+            color:rgb(243, 246, 248);
             margin-bottom: 10px;
         }
-        .button-label {
+       .button-label {
             font-size: 1.2em;
             font-weight: bold;
-            color: #1d3557;
+            color:rgb(243, 244, 245);
             margin-bottom: 15px;
         }
         .stButton > button {
