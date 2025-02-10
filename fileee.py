@@ -152,7 +152,8 @@ if "role" in st.session_state:
         if st.button("Login"):
           if patient_username and patient_password:  # Replace with actual authentication logic
             st.session_state["authenticated"] = True
-            st.experimental_rerun()  # Refresh to hide the login form
+            st.session_state["user_id"] = patient_username  # Store user ID  
+            
           else:
             st.error("Invalid Patient Credentials")
             st.stop()
